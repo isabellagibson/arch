@@ -48,6 +48,10 @@ feh --bg-fill ~/Pictures/Wallpapers/arch.png
 # Download/replace config files
 sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
 sudo wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
+sudo wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
 sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/neofetch/config.conf
+
+# Replace bashrc
+sudo wgethttps://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
 sudo reboot now
