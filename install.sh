@@ -32,6 +32,8 @@ yes | sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
 cd yay
 yes | makepkg -si
+cd
+rm -rf ~/yay
 clear
 
 # Install alacritty & other packages
@@ -52,11 +54,11 @@ mkdir ~/.config/i3
 mkdir ~/.config/polybar
 mkdir ~/.config/neofetch
 mkdir ~/.config/rofi
-sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
-sudo wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
-sudo wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
-sudo wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
-sudo wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
+wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
+wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
+wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
+wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
+wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
 
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
