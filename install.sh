@@ -64,5 +64,8 @@ wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
+# Download ly
+yes | yay -S ly
+
 # Reboot!
 sudo reboot now
