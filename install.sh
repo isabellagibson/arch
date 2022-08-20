@@ -52,6 +52,6 @@ sudo wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.c
 sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/neofetch/config.conf
 
 # Replace bashrc
-sudo wgethttps://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
+sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
 sudo reboot now
