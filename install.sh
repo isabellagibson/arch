@@ -22,19 +22,20 @@ RESET = '\033[0m'
 # Clear the terminal and display a welcome message
 sudo ls
 clear
-echo -f "${LIGHT_CYAN}Hello! :)${RESET}"
-echo -f "Installing everything in 10 seconds, hit CTRL+C to exit..."
+printf "${LIGHT_CYAN}Hello! :)${RESET}"
+printf "Installing everything in 10 seconds, hit CTRL+C to exit..."
 sleep 10
 clear
 
 # Install yay the AUR helper (needed for some packages)
-sudo pacman -S --needed base-devel git
+yes | sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
 cd yay
 yes | makepkg -si
 
 # Install alacritty & other packages
-sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom rofi feh polybar
+clear
+yes | sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom rofi feh polybar
 
 # Install fonts
 sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Light.ttf -O /usr/share/fonts/Raleway-Light.ttf
@@ -54,4 +55,5 @@ sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/ne
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
+# Reboot!
 sudo reboot now
