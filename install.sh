@@ -37,7 +37,7 @@ rm -rf ~/yay
 clear
 
 # Install alacritty & other packages
-yes | sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome
+yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome
 clear
 
 # Install fonts
@@ -57,6 +57,8 @@ mkdir ~/.config/rofi
 wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
 wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
+sudo chmod +x ~/.config/polybar/launch.sh
+sudo chmod 777 ~/.config/polybar/launch.sh
 wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
 wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
 
@@ -64,4 +66,4 @@ wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
 # Reboot!
-# sudo reboot now
+sudo reboot now
