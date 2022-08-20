@@ -36,10 +36,10 @@ bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus right
-bindsym $mod+i focus up
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -159,7 +159,7 @@ bindsym $mod+r mode "resize"
 
 for_window [class=".*"] border pixel 0
 gaps inner 10
-bindsym $mod+x exec i3lock
+bindsym $mod+l exec ly
 for_window [class="Spotify"] move to workspace $ws3
 exec_always picom -f
 exec_always xrandr --output Virtual-1 --mode 1920x1080
