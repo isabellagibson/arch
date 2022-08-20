@@ -16,12 +16,7 @@
     "mirror-region": {},
     "mount_point": null,
     "nic": {
-        "dhcp": true,
-        "dns": null,
-        "gateway": null,
-        "iface": null,
-        "ip": null,
-        "type": "iso"
+        "type": "nm"
     },
     "ntp": true,
     "packages": [],
