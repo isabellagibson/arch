@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font Raleway:monospace 8
+font Raleway Light 8
 # font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
 
