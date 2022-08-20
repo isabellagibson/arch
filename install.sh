@@ -53,6 +53,7 @@ mkdir ~/.config/i3
 mkdir ~/.config/polybar
 mkdir ~/.config/neofetch
 mkdir ~/.config/rofi
+mkdir ~/.config/alacritty
 wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
 wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
@@ -60,6 +61,7 @@ sudo chmod +x ~/.config/polybar/launch.sh
 sudo chmod 777 ~/.config/polybar/launch.sh
 wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
 wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
+wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
