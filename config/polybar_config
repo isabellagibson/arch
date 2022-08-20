@@ -150,8 +150,8 @@ label-connected = " %{F#F0C674}%ifname%%{F-} %local_ip%"
 [module/date]
 type = internal/date
 interval = 1
-date = %I:%M:%S %p %Z
-date-alt = %Y-%m-%d %H:%M:%S
+date = %I:%M:%S %p
+date-alt = %m/%d/%Y %I:%M:%S %p
 label = " %date%"
 label-foreground = ${colors.primary}
 

@@ -47,7 +47,6 @@ sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Light.ttf -O /usr
 mkdir ~/Pictures
 mkdir ~/Pictures/Wallpapers
 wget https://isabellagibson.github.io/arch/assets/wallpaper.png -O ~/Pictures/Wallpapers/arch.png
-feh --bg-fill ~/Pictures/Wallpapers/arch.png
 
 # Download/replace config files
 mkdir ~/.config/i3
