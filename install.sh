@@ -64,6 +64,13 @@ wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.con
 wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
 wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 
+# Setup i3-gaps' radius
+cd
+git clone https://github.com/terroo/i3-radius
+cd i3-radius
+bash sh build.sh
+cd
+
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
