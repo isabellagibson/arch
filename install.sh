@@ -34,7 +34,7 @@ cd yay
 yes | makepkg -si
 
 # Install alacritty & other packages
-sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom rofi feh
+sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom rofi feh polybar
 
 # Install fonts
 sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Light.ttf -O /usr/share/fonts/Raleway-Light.ttf
@@ -46,4 +46,8 @@ wget https://isabellagibson.github.io/arch/assets/wallpaper.png -O ~/Pictures/Wa
 feh --bg-fill ~/Pictures/Wallpapers/arch.png
 
 # Download/replace config files
-sudo wget 
+sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
+sudo wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
+sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/neofetch/config.conf
+
+sudo reboot now
