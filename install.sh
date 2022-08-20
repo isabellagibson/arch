@@ -34,7 +34,16 @@ cd yay
 yes | makepkg -si
 
 # Install alacritty & other packages
-sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom
-# Install Raleway
+sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom rofi feh
+
+# Install fonts
+sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Light.ttf -O /usr/share/fonts/Raleway-Light.ttf
+
+# Set wallpaper
+mkdir Pictures
+mkdir Pictures/Wallpapers
+wget https://isabellagibson.github.io/arch/assets/wallpaper.png -O ~/Pictures/Wallpapers/arch.png
+feh --bg-fill ~/Pictures/Wallpapers/arch.png
+
+# Download/replace config files
 sudo wget 
-# /usr/share/fonts
