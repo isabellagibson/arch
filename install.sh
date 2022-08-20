@@ -35,3 +35,5 @@ yes | makepkg -si
 
 # Install alacritty & other packages
 sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom
+# Install Raleway
+# /usr/share/fonts
