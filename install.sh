@@ -35,7 +35,7 @@ yes | makepkg -si
 clear
 
 # Install alacritty & other packages
-yes | sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom rofi feh polybar
+yes | sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome
 clear
 
 # Install fonts
@@ -51,10 +51,12 @@ feh --bg-fill ~/Pictures/Wallpapers/arch.png
 mkdir ~/.config/i3
 mkdir ~/.config/polybar
 mkdir ~/.config/neofetch
+mkdir ~/.config/rofi
 sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
 sudo wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
 sudo wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
-sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/neofetch/config.conf
+sudo wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
+sudo wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
 
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
