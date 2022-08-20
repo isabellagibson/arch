@@ -3,9 +3,16 @@
     "config_version": "2.5.0",
     "debug": false,
     "desktop-environment": "i3",
+    "gfx_driver": "AMD / ATI (open-source)",
+    "harddrives": null,
     "hostname": "arch",
     "mount_point": null,
     "nic": {
+        "dhcp": true,
+        "dns": null,
+        "gateway": null,
+        "iface": null,
+        "ip": null,
         "type": "nm"
     },
     "plugin": null,
