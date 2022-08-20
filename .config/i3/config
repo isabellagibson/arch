@@ -163,3 +163,4 @@ gaps inner 10
 bindsym $mod+x exec i3lock
 for_window [class="Spotify"] move to workspace $ws3
 exec_always picom -f
+border_radius 10
