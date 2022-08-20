@@ -42,7 +42,7 @@ yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi 
 clear
 
 # Install fonts
-sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Light.ttf -O /usr/share/fonts/Raleway-Light.ttf
+sudo wget https://isabellagibson.github.io/arch/assets/Raleway-SemiBold.ttf -O /usr/share/fonts/RalewaySemiBold.ttf
 
 # Set wallpaper
 mkdir ~/Pictures
