@@ -15,9 +15,6 @@
     "keyboard-layout": "us",
     "mirror-region": {},
     "mount_point": null,
-    "nic": {
-        "type": "nm"
-    },
     "ntp": true,
     "packages": [],
     "plugin": null,
