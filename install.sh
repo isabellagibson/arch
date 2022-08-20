@@ -20,6 +20,7 @@ WHITE='\033[1;37m'
 RESET='\033[0m'
 
 # Clear the terminal and display a welcome message
+clear
 sudo ls
 clear
 echo "Hello! :)"
