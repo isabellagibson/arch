@@ -1,0 +1,19 @@
+{
+    "audio": "pipewire",
+    "config_version": "2.5.0",
+    "debug": false,
+    "desktop-environment": "i3",
+    "hostname": "arch",
+    "mount_point": null,
+    "nic": {
+        "type": "nm"
+    },
+    "plugin": null,
+    "profile": {
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/desktop.py"
+    },
+    "script": "guided",
+    "silent": false,
+    "timezone": "America/Los_Angeles",
+    "version": "2.5.0"
+}
