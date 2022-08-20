@@ -22,8 +22,8 @@ RESET = '\033[0m'
 # Clear the terminal and display a welcome message
 sudo ls
 clear
-printf "${LIGHT_CYAN}Hello! :)${RESET}"
-printf "Installing everything in 10 seconds, hit CTRL+C to exit..."
+echo "Hello! :)"
+echo "Installing everything in 10 seconds, hit CTRL+C to exit..."
 sleep 10
 clear
 
@@ -32,10 +32,11 @@ yes | sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
 cd yay
 yes | makepkg -si
+clear
 
 # Install alacritty & other packages
-clear
 yes | sudo pacman -S neofetch vim alacritty net-tools nmap ufw zip unzip picom rofi feh polybar
+clear
 
 # Install fonts
 sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Light.ttf -O /usr/share/fonts/Raleway-Light.ttf
@@ -47,6 +48,9 @@ wget https://isabellagibson.github.io/arch/assets/wallpaper.png -O ~/Pictures/Wa
 feh --bg-fill ~/Pictures/Wallpapers/arch.png
 
 # Download/replace config files
+mkdir ~/.config/i3
+mkdir ~/.config/polybar
+mkdir ~/.config/neofetch
 sudo wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
 sudo wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
 sudo wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
