@@ -38,7 +38,7 @@ rm -rf ~/yay
 clear
 
 # Install alacritty & other packages
-yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome
+yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome dunst libnotify
 clear
 
 # Install fonts
@@ -60,11 +60,13 @@ mkdir ~/.config/alacritty
 wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
 wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
-sudo chmod 777 ~/.config/polybar/launch.sh
-sudo chmod +x ~/.config/polybar/launch.sh
 wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
 wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
 wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
+chmod +x ~/.config/polybar/launch.sh
+
+# Install spotify
+yes | yay -S spotify
 
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
