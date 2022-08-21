@@ -38,7 +38,7 @@ rm -rf ~/yay
 clear
 
 # Install alacritty & other packages
-yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome rofimoji
+yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome rofimoji i3lock-fancy-git
 clear
 
 # Install fonts
