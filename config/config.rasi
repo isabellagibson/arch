@@ -1,6 +1,6 @@
 configuration {
-    display-drun: "Apps:";
-    display-window: "Windows:";
+    display-drun: "Apps";
+    display-window: "Windows";
     drun-display-format: "{name}";
     font: "Raleway Regular 10";
     modi: "window,run,drun,emoji,calc";
