@@ -71,11 +71,11 @@ sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 yes | yay -S betterlockscreen
 
 # Setup i3-gaps' radius
-cd
-git clone https://github.com/terroo/i3-radius
-cd i3-radius
-bash build.sh
-cd
+# cd
+# git clone https://github.com/terroo/i3-radius
+# cd i3-radius
+# bash build.sh
+# cd
 
 # Reboot!
 clear
