@@ -43,6 +43,7 @@ clear
 
 # Install fonts
 sudo wget https://isabellagibson.github.io/arch/assets/Raleway-SemiBold.ttf -O /usr/share/fonts/RalewaySemiBold.ttf
+sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Regular.ttf -O /usr/share/fonts/RalewayRegular.ttf
 
 # Set wallpaper
 mkdir ~/Pictures
@@ -79,4 +80,6 @@ yes | yay -S betterlockscreen
 
 # Reboot!
 clear
+xrandr -q | grep " connected" | cut -d ' ' -f1
+sleep 10
 sudo reboot now
