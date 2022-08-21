@@ -74,8 +74,8 @@ cd
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
-# Download ly
-yes | yay -S ly
+# Download betterlockscreen
+yes | yay -S betterlockscreen
 
 # Reboot!
 sudo reboot now

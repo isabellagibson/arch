@@ -159,8 +159,8 @@ bindsym $mod+r mode "resize"
 
 exec_always feh --bg-fill ~/Pictures/Wallpapers/arch.png
 for_window [class=".*"] border pixel 2 #*
-gaps inner 32
-gaps outer 10
+gaps inner 10
+gaps outer 5
 bindsym $mod+l exec ly
 for_window [class="Spotify"] move to workspace $ws3
 exec_always picom -f
