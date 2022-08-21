@@ -3,6 +3,6 @@ configuration {
     display-window: "Windows:";
     drun-display-format: "{name}";
     font: "Raleway Regular 10";
-    modi: "window,run,drun,emoji,calc"
+    modi: "window,run,drun,emoji,calc";
 }
 @theme "/usr/share/rofi/themes/solarized_alternate.rasi"
