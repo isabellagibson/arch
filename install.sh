@@ -74,7 +74,7 @@ yes | yay -S betterlockscreen
 cd
 git clone https://github.com/terroo/i3-radius
 cd i3-radius
-bash sh build.sh
+bash build.sh
 cd
 
 # Reboot!
