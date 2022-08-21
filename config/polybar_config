@@ -8,10 +8,10 @@ alert = #A54242
 disabled = #707880
 
 [bar/example]
-width = 95%
-height = 30pt
-radius = 6
-
+width = 90%
+height = 22
+radius = 2
+fixed-center = false
 ; dpi = 96
 
 background = ${colors.background}
@@ -24,7 +24,7 @@ line-size = 3pt
 
 padding-left = 1
 padding-right = 1
-module-margin = 3
+module-margin = 2
 separator = |
 separator-foreground = ${colors.disabled}
 
@@ -33,13 +33,11 @@ separator-foreground = ${colors.disabled}
 #font-2 = siji:pixelsize=10;1
 # font-0 = DejavuSansMono:size=10;4
 ; font-0 = RalewayLight:size=10;4
-font-1 = RalewaySemiBold:size=10;4
-font-2 = FontAwesome6Brands:style=Regular:size=10;4
-font-3 = FontAwesome6Free:style=Solid:size=10;4
+font-0 = RalewaySemiBold:size=10;4
+font-1 = FontAwesome6Brands:style=Regular:size=10;4
+font-2 = FontAwesome6Free:style=Solid:size=10;4
 
-modules-left = xworkspaces xwindow
-#modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date
-#modules-left = bspwm i3
+modules-left = xworkspaces xwindow bspwm i3
 modules-center = mpd
 modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
@@ -143,7 +141,7 @@ label-connected = %{F#F0C674}%ifname%%{F-} %essid% %local_ip%
 [module/eth]
 inherit = network-base
 interface-type = wired
-label-connected = " %{F#F0C674}%ifname%%{F-} %local_ip%"
+label-connected = " %local_ip%"
 
 [module/date]
 type = internal/date
