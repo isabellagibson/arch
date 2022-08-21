@@ -38,7 +38,7 @@ rm -rf ~/yay
 clear
 
 # Install alacritty & other packages
-yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome rofimoji
+yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome
 clear
 
 # Install fonts
@@ -60,8 +60,8 @@ mkdir ~/.config/alacritty
 wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
 wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
-sudo chmod +x ~/.config/polybar/launch.sh
 sudo chmod 777 ~/.config/polybar/launch.sh
+sudo chmod +x ~/.config/polybar/launch.sh
 wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
 wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
 wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
@@ -69,18 +69,9 @@ wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/ala
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
-# Download betterlockscreen
-yes | yay -S betterlockscreen
-
-# Setup i3-gaps' radius
-# cd
-# git clone https://github.com/terroo/i3-radius
-# cd i3-radius
-# bash build.sh
-# cd
-
 # Reboot!
 clear
-xrandr -q | grep " connected" | cut -d ' ' -f1
-sleep 10
+DISPLAY=xrandr -q | grep " connected" | cut -d ' ' -f1
+echo "Found $DISPLAY"
+sleep 5
 sudo reboot now
