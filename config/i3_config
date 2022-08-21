@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font Raleway Light 8
+font pango:Raleway Light 11
 # font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
 
@@ -159,8 +159,8 @@ bindsym $mod+r mode "resize"
 
 exec_always feh --bg-fill ~/Pictures/Wallpapers/arch.png
 for_window [class=".*"] border pixel 2 #*
-gaps inner 10
-gaps outer 1
+gaps inner 32
+gaps outer 10
 bindsym $mod+l exec ly
 for_window [class="Spotify"] move to workspace $ws3
 exec_always picom -f
@@ -168,4 +168,4 @@ exec_always xrandr --output Virtual-1 --mode 1920x1080
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 smart_borders on
 smart_borders no_gaps
-border_radius 2
+# border_radius 2
