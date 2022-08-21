@@ -72,7 +72,7 @@ sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
 # Reboot!
 clear
-DISPLAY=xrandr -q | grep " connected" | cut -d ' ' -f1
+DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
 echo "Found $DISPLAY"
 sleep 5
 sudo reboot now
