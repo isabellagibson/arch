@@ -79,6 +79,4 @@ cd
 
 # Reboot!
 clear
-echo "Hit enter to restart."
-read
 sudo reboot now
