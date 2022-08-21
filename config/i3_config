@@ -157,6 +157,7 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
+exec_always xrandr --output Virtual1 --mode 1920x1080
 exec_always feh --bg-fill ~/Pictures/Wallpapers/arch.png
 for_window [class=".*"] border pixel 2 #*
 gaps inner 10
@@ -164,7 +165,6 @@ gaps outer 5
 bindsym $mod+l exec ly
 for_window [class="Spotify"] move to workspace $ws3
 exec_always picom -f
-exec_always xrandr --output Virtual-1 --mode 1920x1080
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 smart_borders on
 smart_borders no_gaps
