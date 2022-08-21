@@ -82,5 +82,5 @@ yes | yay -S betterlockscreen
 # Reboot!
 clear
 xrandr -q | grep " connected" | cut -d ' ' -f1
-sleep 3
+sleep 10
 sudo reboot now
