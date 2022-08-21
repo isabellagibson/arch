@@ -22,11 +22,9 @@ line-size = 3pt
 ; border-size = 4pt
 ; border-color = #00000000
 
-padding-left = 3
-padding-right = 3
-
+padding-left = 1
+padding-right = 1
 module-margin = 3
-
 separator = |
 separator-foreground = ${colors.disabled}
 
@@ -43,7 +41,7 @@ modules-left = xworkspaces xwindow
 #modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date
 #modules-left = bspwm i3
 modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory launcher powermenu cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -80,27 +78,6 @@ label-empty-padding = 1
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:60:...%
-
-[module/launcher]
-type = custom/text
-
-content = 異
-content-background = black
-content-foreground = green
-
-click-left = ~/.config/rofi/launchers/type-1/launcher.sh
-click-right = launcher_t1
-
-;; Power Menu Module
-[module/powermenu]
-type = custom/text
-
-content = 襤
-content-background = black
-content-foreground = red
-
-click-left = ~/.config/rofi/powermenu/type-1/powermenu.sh
-click-right = powermenu_t1
 
 [module/filesystem]
 type = internal/fs
