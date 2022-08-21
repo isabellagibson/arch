@@ -38,7 +38,7 @@ rm -rf ~/yay
 clear
 
 # Install alacritty & other packages
-yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome rofimoji i3lock-fancy-git
+yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome rofimoji
 clear
 
 # Install fonts
@@ -82,5 +82,5 @@ yes | yay -S betterlockscreen
 # Reboot!
 clear
 xrandr -q | grep " connected" | cut -d ' ' -f1
-sleep 10
+sleep 3
 sudo reboot now
