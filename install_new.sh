@@ -39,7 +39,7 @@ clear
 # Download/replace config files
 echo "Grabbing config files..."
 mkdir ~/.config/polybar
-wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
+wget https://isabellagibson.github.io/arch/config/polybar.ini -O ~/.config/polybar/config
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
 
 mkdir ~/.config/i3
