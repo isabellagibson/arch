@@ -24,7 +24,6 @@ yes | sudo pacman -S rofi
 yes | sudo pacman -S feh
 yes | sudo pacman -S polybar
 yes | sudo pacman -S ttf-font-awesome
-yes | sudo pacman -S brave-browser
 sleep 10
 clear
 
