@@ -50,9 +50,11 @@ clear
 
 # Download/replace config files
 echo "Grabbing config files..."
+
 mkdir ~/.config/polybar
 wget https://isabellagibson.github.io/arch/config/polybar.ini -O ~/.config/polybar/config
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
+chmod +x ~/.config/polybar/launch.sh
 
 mkdir ~/.config/i3
 wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
@@ -67,7 +69,6 @@ mkdir ~/.config/picom
 wget https://isabellagibson.github.io/arch/config/picom.conf -O ~/.config/picom/picom.conf
 # mkdir ~/.config/alacritty
 # wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
-chmod +x ~/.config/polybar/launch.sh
 clear
 
 # Install spotify
@@ -79,6 +80,6 @@ sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 # Reboot!
 clear
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
-echo "Found $DISPLAY"
-sleep 5
+echo "Found display $DISPLAY"
+sleep 10
 sudo reboot now
