@@ -32,13 +32,6 @@ bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 
-# change focus
-# bindsym $mod+j focus left
-# bindsym $mod+k focus down
-# bindsym $mod+l focus up
-# bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -147,16 +140,10 @@ bindsym $mod+r mode "resize"
 #}
 
 
-exec_always xrandr --output Virtual1 --mode 1920x1080
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-fill ~/Pictures/Wallpapers/arch.png
-gaps inner 10
-gaps outer 5
 exec_always picom -f
-for_window [class=".*"] border pixel 0
-for_window [class="Spotify"] move to workspace $ws3
+exec_always xrandr --output Virtual1 --mode 1920x1080
 exec_always feh --bg-fill ~/Pictures/Wallpapers/arch.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-bindsym $mod+l "exec i3lock"
-# smart_borders on
-# smart_borders no_gaps
+gaps inner 10
+for_window [class=".*"] border pixel 0
+for_window [class="Spotify"] move to workspace $ws2
