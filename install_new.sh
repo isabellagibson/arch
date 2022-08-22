@@ -12,11 +12,11 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome brave-browser
+yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome brave-browser base-devel git
+sleep 10
 clear
 
 # Install yay the AUR helper (needed for some packages)
-yes | sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
 cd yay
 yes | makepkg -si
