@@ -28,22 +28,19 @@ module-margin = 2
 separator = |
 separator-foreground = ${colors.disabled}
 
-font-0 = monospace;2
 #font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 #font-2 = siji:pixelsize=10;1
 # font-0 = DejavuSansMono:size=10;4
 ; font-0 = RalewayLight:size=10;4
 # font-0 = RalewaySemiBold:size=10;4
+font-0 = monospace;2
 font-1 = FontAwesome6Brands:style=Regular:size=10;4
 font-2 = FontAwesome6Free:style=Solid:size=10;4
-
 modules-left = xworkspaces xwindow i3
 modules-center = mpd
 modules-right = filesystem xbacklight alsa pulseaudio memory cpu wlan eth battery temperature date powermenu
-
 cursor-click = pointer
 cursor-scroll = ns-resize
-
 enable-ipc = true
 
 ; tray-position = right
@@ -80,34 +77,26 @@ label = %title:0:60:...%
 [module/filesystem]
 type = internal/fs
 interval = 25
-
 mount-0 = /
-
 ; %{F#F0C674}%mountpoint%%{F-} 
 label-mounted = " %percentage_used%%"
-
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
 format-volume-prefix = " "
 format-volume-prefix-foreground = ${colors.primary}
 format-volume = <label-volume>
-
 label-volume = %percentage%%
-
 label-muted = muted
 label-muted-foreground = ${colors.disabled}
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-
 label-layout = %layout%
 label-layout-foreground = ${colors.primary}
-
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-foreground = ${colors.background}

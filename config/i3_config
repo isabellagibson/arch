@@ -27,6 +27,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 floating_modifier $mod
+# i3-sensible-terminal
 bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_run
@@ -135,15 +136,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#bar {
-#        status_command i3status
-#}
-
-
-exec_always picom -f
 exec_always xrandr --output Virtual1 --mode 1920x1080
-exec_always feh --bg-fill ~/Pictures/Wallpapers/arch.png
+exec_always feh --bg-fill $HOME/Pictures/Wallpapers/arch.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-gaps inner 10
-for_window [class=".*"] border pixel 0
-for_window [class="Spotify"] move to workspace $ws2
+exec_always picom -f
+# gaps inner 10
+# for_window [class=".*"] border pixel 0
+# for_window [class="Spotify"] move to workspace $ws2

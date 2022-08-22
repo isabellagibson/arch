@@ -38,17 +38,20 @@ clear
 
 # Download/replace config files
 echo "Grabbing config files..."
-mkdir ~/.config/i3
 mkdir ~/.config/polybar
-mkdir ~/.config/neofetch
-mkdir ~/.config/rofi
-mkdir ~/.config/alacritty
-wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
 wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
+
+mkdir ~/.config/i3
+wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
+
+mkdir ~/.config/neofetch
 wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
+
+mkdir ~/.config/rofi
 wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
-wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
+# mkdir ~/.config/alacritty
+# wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 chmod +x ~/.config/polybar/launch.sh
 clear
 
