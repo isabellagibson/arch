@@ -1,30 +1,31 @@
 #!/bin/bash
 
-# Terminal colors
-BLACK='\033[0;30m'
-DARK_GRAY='\033[1;30m'
-RED='\033[0;31m'
-LIGHT_RED='\033[1;31m'
-GREEN='\033[0;32m'
-LIGHT_GREEN='\033[1;32m'
-ORANGE='\033[0;33m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-LIGHT='\033[1;34m'
-PURPLE='\033[0;35m'
-LIGHT_PURPLE='\033[1;35m'
-CYAN='\033[0;36m'
-LIGHT_CYAN='\033[1;36m'
-LIGHT_GRAY='\033[0;37m'
-WHITE='\033[1;37m'
-RESET='\033[0m'
-
 # Clear the terminal and display a welcome message
 clear
+echo "Root access is needed for this script. Please enter your password below."
 sudo ls
 clear
 echo "Hello! :)"
 echo "Installing everything in 10 seconds, hit CTRL+C to exit..."
+sleep 10
+clear
+
+# Install alacritty & other packages
+echo "Installing packages..."
+yes | sudo pacman -S neofetch
+yes | sudo pacman -S alacritty
+yes | sudo pacman -S net-tools
+yes | sudo pacman -S nmap
+yes | sudo pacman -S ufw
+yes | sudo pacman -S zip
+yes | sudo pacman -S unzip
+yes | sudo pacman -S picom
+yes | sudo pacman -S rofi
+yes | sudo pacman -S feh
+yes | sudo pacman -S polybar
+yes | sudo pacman -S ttf-font-awesome
+yes | sudo pacman -S dunst
+yes | sudo pacman -S libnotify
 sleep 10
 clear
 
@@ -37,32 +38,40 @@ cd
 rm -rf ~/yay
 clear
 
-# Install alacritty & other packages
-yes | sudo pacman -S neofetch alacritty net-tools nmap ufw zip unzip picom rofi feh polybar ttf-font-awesome dunst libnotify
-clear
-
 # Install fonts
+echo "Installing fonts..."
 sudo wget https://isabellagibson.github.io/arch/assets/Raleway-SemiBold.ttf -O /usr/share/fonts/RalewaySemiBold.ttf
 sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Regular.ttf -O /usr/share/fonts/RalewayRegular.ttf
+clear
 
 # Set wallpaper
-mkdir ~/Pictures
-mkdir ~/Pictures/Wallpapers
+echo "Downloading the wallpaper..."
+mkdir -p ~/Pictures/Wallpapers
 wget https://isabellagibson.github.io/arch/assets/wallpaper.png -O ~/Pictures/Wallpapers/arch.png
+clear
 
 # Download/replace config files
-mkdir ~/.config/i3
+echo "Grabbing config files..."
+
 mkdir ~/.config/polybar
-mkdir ~/.config/neofetch
-mkdir ~/.config/rofi
-mkdir ~/.config/alacritty
-wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
-wget https://isabellagibson.github.io/arch/config/polybar_config -O ~/.config/polybar/config
+wget https://isabellagibson.github.io/arch/config/polybar.ini -O ~/.config/polybar/config
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
-wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
-wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
-wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 chmod +x ~/.config/polybar/launch.sh
+
+mkdir ~/.config/i3
+wget https://isabellagibson.github.io/arch/config/i3_config -O ~/.config/i3/config
+
+mkdir ~/.config/neofetch
+wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.config/neofetch/config.conf
+
+mkdir ~/.config/rofi
+wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
+
+mkdir ~/.config/picom
+wget https://isabellagibson.github.io/arch/config/picom.conf -O ~/.config/picom/picom.conf
+# mkdir ~/.config/alacritty
+# wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
+clear
 
 # Install spotify
 yes | yay -S spotify
@@ -73,6 +82,6 @@ sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 # Reboot!
 clear
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
-echo "Found $DISPLAY"
-sleep 5
+echo "Found display $DISPLAY"
+sleep 10
 sudo reboot now
