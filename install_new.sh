@@ -62,6 +62,9 @@ wget https://isabellagibson.github.io/arch/config/neofetch_config.conf -O ~/.con
 
 mkdir ~/.config/rofi
 wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/config.rasi
+
+mkdir ~/.config/picom
+wget https://isabellagibson.github.io/arch/config/picom.conf -O ~/.config/picom/picom.conf
 # mkdir ~/.config/alacritty
 # wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 chmod +x ~/.config/polybar/launch.sh
