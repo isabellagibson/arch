@@ -153,7 +153,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always picom -f --experimental-backends
 gaps inner 10
 for_window [class=".*"] border pixel 0
-playerctld daemon &
+exec_always playerctld daemon &
 # bindsym $mod+l exec "rofi -show power-menu -modi power-menu:.$HOME/.local/bin/rofi-power-menu"
 
 # Media controls
