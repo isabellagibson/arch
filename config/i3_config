@@ -137,16 +137,27 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Custom keyboard shortcuts
+bindsym $mod+m exec "nemo &"
+
+# Workspace application handling
+for_window [class="brave-browser"] move to workspace $ws1
+for_window [class="Spotify"] move to workspace $ws2
+for_window [class="discord"] move to workspace $ws3
+for_window [class="code"] move to workspace $ws4
+for_window [class="Alacritty"] move to workspace $ws5
+
 exec_always xrandr --output Virtual1 --mode 1920x1080
 exec_always feh --bg-fill $HOME/Pictures/Wallpapers/arch.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always picom -f --experimental-backends
 gaps inner 10
 for_window [class=".*"] border pixel 0
-for_window [class="brave-browser"] move to workspace $ws1
-for_window [class="Spotify"] move to workspace $ws2
-for_window [class="discord"] move to workspace $ws3
-for_window [class="code"] move to workspace $ws4
-for_window [class="Alacritty"] move to workspace $ws5
-bindsym $mod+m exec "nemo &"
+playerctld daemon &
 # bindsym $mod+l exec "rofi -show power-menu -modi power-menu:.$HOME/.local/bin/rofi-power-menu"
+
+# Media controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous

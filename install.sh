@@ -12,7 +12,7 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code
+yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl
 yes | sudo pacman -S picom
 yes | sudo pacman -S dunst
 yes | sudo pacman -S libnotify
@@ -63,8 +63,8 @@ wget https://isabellagibson.github.io/arch/config/picom.conf -O ~/.config/picom/
 mkdir -p ~/.config/Code/User
 wget https://isabellagibson.github.io/arch/config/vsc_settings.json -O ~/.config/Code/User/settings.json
 
-# mkdir ~/.config/alacritty
-# wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
+mkdir ~/.config/alacritty
+wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 clear
 
 cd
