@@ -77,6 +77,7 @@ cd
 git clone https://github.com/jluttine/rofi-power-menu
 cd rofi-power-menu/
 sudo cp ./rofi-power-menu ~/.local/bin
+cd
 
 # Install spotify
 yes | yay -S spotify
