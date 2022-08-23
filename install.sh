@@ -73,6 +73,11 @@ wget https://isabellagibson.github.io/arch/config/picom.conf -O ~/.config/picom/
 # wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 clear
 
+cd
+git clone https://github.com/jluttine/rofi-power-menu
+cd rofi-power-menu/
+sudo cp ./rofi-power-menu ~/.local/bin
+
 # Install spotify
 yes | yay -S spotify
 
