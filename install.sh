@@ -74,20 +74,23 @@ wget https://isabellagibson.github.io/arch/config/picom.conf -O ~/.config/picom/
 clear
 
 cd
+mkdir -p ~/.local/bin
 git clone https://github.com/jluttine/rofi-power-menu
 cd rofi-power-menu/
 cp rofi-power-menu ~/.local/bin
 chmod +x ~/.local/bin/rofi-power-menu
 cd
+clear
 
 # Install spotify
 yes | yay -S spotify
+clear
 
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
+clear
 
 # Reboot!
-clear
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
 echo "Found display $DISPLAY"
 sleep 10
