@@ -144,5 +144,5 @@ exec_always picom -f --experimental-backends
 gaps inner 10
 for_window [class=".*"] border pixel 0
 for_window [class="Spotify"] move to workspace $ws2
-bindsym $mod+e exec "dolphin &"
+bindsym $mod+m exec "nemo &"
 # bindsym $mod+l exec "rofi -show power-menu -modi power-menu:.$HOME/.local/bin/rofi-power-menu"
