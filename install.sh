@@ -59,6 +59,10 @@ wget https://isabellagibson.github.io/arch/config/config.rasi -O ~/.config/rofi/
 
 mkdir ~/.config/picom
 wget https://isabellagibson.github.io/arch/config/picom.conf -O ~/.config/picom/picom.conf
+
+mkdir -p ~/.config/Code/User
+wget https://isabellagibson.github.io/arch/config/vsc_settings.json -O ~/.config/Code/User/settings.json
+
 # mkdir ~/.config/alacritty
 # wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 clear

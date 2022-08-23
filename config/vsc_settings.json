@@ -1,0 +1,16 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Monokai Pro",
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.folders.color": "#90a4ae",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
+    "remote.SSH.remotePlatform": {
+        "app.healthyplayerone.com": "linux"
+    },
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "explorer.confirmDragAndDrop": false
+}
