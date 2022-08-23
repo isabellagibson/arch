@@ -12,13 +12,8 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-yes | sudo pacman -S neofetch
-yes | sudo pacman -S alacritty
-yes | sudo pacman -S net-tools
+yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip
 yes | sudo pacman -S nmap
-yes | sudo pacman -S ufw
-yes | sudo pacman -S zip
-yes | sudo pacman -S unzip
 yes | sudo pacman -S picom
 yes | sudo pacman -S rofi
 yes | sudo pacman -S feh
@@ -26,7 +21,7 @@ yes | sudo pacman -S polybar
 yes | sudo pacman -S ttf-font-awesome
 yes | sudo pacman -S dunst
 yes | sudo pacman -S libnotify
-sleep 10
+sleep 3
 clear
 
 # Install yay the AUR helper (needed for some packages)
@@ -83,8 +78,8 @@ cd
 rm -rf rofi-power-menu/
 clear
 
-# Install spotify
 yes | yay -S spotify
+yes | yay -S visual-studio-code-bin
 clear
 
 # Replace bashrc
@@ -94,5 +89,5 @@ clear
 # Reboot!
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
 echo "Found display $DISPLAY"
-sleep 10
+sleep 5
 sudo reboot now
