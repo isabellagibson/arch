@@ -31,7 +31,8 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindsym $mod exec "rofi -modi drun,run -show drun"
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
