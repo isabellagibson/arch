@@ -77,9 +77,10 @@ cd
 mkdir -p ~/.local/bin
 git clone https://github.com/jluttine/rofi-power-menu
 cd rofi-power-menu/
-cp rofi-power-menu ~/.local/bin
+cp rofi-power-menu ~/.local/bin/
 chmod +x ~/.local/bin/rofi-power-menu
 cd
+rm -rf rofi-power-menu/
 clear
 
 # Install spotify
