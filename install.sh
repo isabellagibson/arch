@@ -63,6 +63,9 @@ wget https://isabellagibson.github.io/arch/config/picom.conf -O ~/.config/picom/
 mkdir -p ~/.config/Code/User
 wget https://isabellagibson.github.io/arch/config/vsc_settings.json -O ~/.config/Code/User/settings.json
 
+mkdir -p ~/.config/dunst
+wget https://isabellagibson.github.io/arch/config/dunstrc -O ~/.config/dunst/dunstrc
+
 mkdir ~/.config/alacritty
 wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 clear
