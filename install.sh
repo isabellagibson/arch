@@ -12,12 +12,9 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip
+yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip dolphin rofi feh polybar
 yes | sudo pacman -S nmap
 yes | sudo pacman -S picom
-yes | sudo pacman -S rofi
-yes | sudo pacman -S feh
-yes | sudo pacman -S polybar
 yes | sudo pacman -S ttf-font-awesome
 yes | sudo pacman -S dunst
 yes | sudo pacman -S libnotify
