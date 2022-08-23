@@ -12,7 +12,7 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome
+yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code
 yes | sudo pacman -S picom
 yes | sudo pacman -S dunst
 yes | sudo pacman -S libnotify
@@ -83,7 +83,8 @@ sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 clear
 
 echo "Almost there! Installing brave..."
-
+sudo yes | yay -S gnu-free-fonts
+yes | yay -S brave-bin
 clear
 
 echo "Last step! Changing GRUB theme..."
