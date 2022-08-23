@@ -12,7 +12,7 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils
+yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils
 yes | sudo pacman -S nmap
 yes | sudo pacman -S picom
 yes | sudo pacman -S ttf-font-awesome
@@ -77,11 +77,21 @@ clear
 
 yes | yay -S spotify
 yes | yay -S visual-studio-code-bin
+yes | yay -S grub-customizer
 clear
 
 # Replace bashrc
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 clear
+
+echo "Last step! Changing GRUB theme..."
+cd
+wget https://isabellagibson.github.io/arch/assets/grub-themes.zip
+unzip grub-themes.zip
+cd grub-themes/
+sudo bash install.sh
+cd
+rm -rf grub-themes.zip grub-themes/
 
 # Reboot!
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
