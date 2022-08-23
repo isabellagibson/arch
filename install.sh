@@ -49,7 +49,7 @@ clear
 echo "Grabbing config files..."
 
 mkdir ~/.config/polybar
-wget https://isabellagibson.github.io/arch/config/polybar.ini -O ~/.config/polybar/config
+wget https://isabellagibson.github.io/arch/config/polybar.ini -O ~/.config/polybar/config.ini
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
 
