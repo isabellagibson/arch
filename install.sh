@@ -12,8 +12,8 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-sudo pacman -S --needed base-devel git
-for package in "neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji picom dunst libnotify yt-dlp ffmpeg python-pip man-db gnu-free-fonts"; do
+yes | sudo pacman -S --needed base-devel git
+for package in "neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji picom dunst libnotify yt-dlp ffmpeg python-pip man-db"; do
     yes | sudo pacman -S $package
 done
 
@@ -75,8 +75,12 @@ sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 clear
 
 echo "Installing AUR packages..."
-yes | yay -S spotify
+# Dependencies
 yes | yay -S gnome-keyring
+yes | yay -S gnu-free-fonts
+
+# Apps
+yes | yay -S spotify
 yes | yay -S visual-studio-code-bin
 yes | yay -S grub-customizer
 yes | yay -S github-desktop-bin
