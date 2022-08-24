@@ -148,7 +148,7 @@ for_window [class="code"] move to workspace $ws4
 for_window [class="Alacritty"] move to workspace $ws5
 
 exec_always xrandr --output Virtual1 --mode 1920x1080
-exec_always feh --bg-fill $HOME/Pictures/Wallpapers/arch.png
+exec_always feh --bg-fill --randomize $HOME/Pictures/Wallpapers/
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always picom -f --experimental-backends
 gaps inner 10

@@ -35,9 +35,13 @@ sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Regular.ttf -O /u
 clear
 
 # Set wallpaper
-echo "Downloading the wallpaper..."
-mkdir -p ~/Pictures/Wallpapers
-wget https://isabellagibson.github.io/arch/assets/wallpaper.png -O ~/Pictures/Wallpapers/arch.png
+echo "Downloading wallpapers..."
+mkdir -p ~/Pictures
+cd ~/Pictures
+wget https://isabellagibson.github.io/arch/assets/Wallpapers.zip -O Wallpapers.zip
+unzip Wallpapers.zip
+rm Wallpapers.zip
+cd
 clear
 
 # Download/replace config files
