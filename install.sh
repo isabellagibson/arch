@@ -8,6 +8,7 @@ clear
 echo "Hello! :)"
 echo "Installing everything in 10 seconds, hit CTRL+C to exit..."
 sleep 10
+sudo pacman -Syy
 clear
 
 # Install alacritty & other packages
