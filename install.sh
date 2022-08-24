@@ -14,7 +14,7 @@ clear
 # Install alacritty & other packages
 echo "Installing packages..."
 yes | sudo pacman -S --needed base-devel git
-for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "unzip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "ttf-apple-emoji" "xsel" "xclip" "copq" "xdotool"
+for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "unzip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "copq" "xdotool"
 do
     echo "Installing $package"
     sleep 1
@@ -82,6 +82,7 @@ echo "Installing AUR packages..."
 # Dependencies
 yes | yay -S gnome-keyring
 yes | yay -S gnu-free-fonts
+yes | yay -S ttf-apple-emoji
 
 # Apps
 yes | yay -S spotify
