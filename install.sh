@@ -12,13 +12,12 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-for package in "neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji picom dunst libnotify yt-dlp ffmpeg python-pip gnome-keyring man-db gnu-free-fonts"; do
-    yes | sudo pacman -S --needed $package
+for package in "base-devel git neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji picom dunst libnotify yt-dlp ffmpeg python-pip man-db gnu-free-fonts"; do
+    yes | sudo pacman -S $package
     clear
 done
 
 # Install yay the AUR helper (needed for some packages)
-yes | sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
 cd yay
 yes | makepkg -si
@@ -77,6 +76,7 @@ clear
 
 echo "Installing AUR packages..."
 yes | yay -S spotify
+yes | yay -S gnome-keyring
 yes | yay -S visual-studio-code-bin
 yes | yay -S grub-customizer
 yes | yay -S github-desktop-bin
