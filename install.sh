@@ -12,10 +12,10 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji
-yes | sudo pacman -S picom dunst libnotify yt-dlp ffmpeg python-pip gnome-keyring man-db
-sleep 3
-clear
+for package in "neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji picom dunst libnotify yt-dlp ffmpeg python-pip gnome-keyring man-db gnu-free-fonts"; do
+    yes | sudo pacman -S --needed $package
+    clear
+done
 
 # Install yay the AUR helper (needed for some packages)
 yes | sudo pacman -S --needed base-devel git
@@ -72,20 +72,14 @@ mkdir ~/.config/alacritty
 wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 clear
 
+sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
+clear
 
 echo "Installing AUR packages..."
 yes | yay -S spotify
 yes | yay -S visual-studio-code-bin
 yes | yay -S grub-customizer
 yes | yay -S github-desktop-bin
-clear
-
-# Replace bashrc
-sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
-clear
-
-echo "Almost there! Installing brave..."
-sudo yes | yay -S gnu-free-fonts
 yes | yay -S brave-bin
 clear
 
