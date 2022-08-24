@@ -12,7 +12,8 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-for package in "base-devel git neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji picom dunst libnotify yt-dlp ffmpeg python-pip man-db gnu-free-fonts"; do
+sudo pacman -S --needed base-devel git
+for package in "neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji picom dunst libnotify yt-dlp ffmpeg python-pip man-db gnu-free-fonts"; do
     yes | sudo pacman -S $package
 done
 
