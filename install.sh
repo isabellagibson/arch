@@ -12,7 +12,8 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji picom dunst libnotify yt-dlp ffmpeg python-pip gnome-keyring man-db
+yes | sudo pacman -S neofetch alacritty net-tools ufw zip unzip rofi feh polybar nemo coreutils inetutils discord nmap ttf-font-awesome ttf-fira-code playerctl rofi-emoji
+yes | sudo pacman -S picom dunst libnotify yt-dlp ffmpeg python-pip gnome-keyring man-db
 sleep 3
 clear
 
