@@ -71,19 +71,12 @@ mkdir ~/.config/alacritty
 wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 clear
 
-cd
-mkdir -p ~/.local/bin
-git clone https://github.com/jluttine/rofi-power-menu
-cd rofi-power-menu/
-cp rofi-power-menu ~/.local/bin/
-chmod +x ~/.local/bin/rofi-power-menu
-cd
-rm -rf rofi-power-menu/
-clear
 
+echo "Installing AUR packages..."
 yes | yay -S spotify
 yes | yay -S visual-studio-code-bin
 yes | yay -S grub-customizer
+yes | yay -S github-desktop-bin
 clear
 
 # Replace bashrc
