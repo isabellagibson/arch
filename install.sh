@@ -81,6 +81,9 @@ wget https://isabellagibson.github.io/arch/config/scroll_spotify_status.sh -O ~/
 chmod +x ~/.config/polybar/scripts/get_spotify_status.sh
 chmod +x ~/.config/polybar/scripts/scroll_spotify_status.sh
 
+wget https://isabellagibson.github.io/arch/config/power.rasi -O /usr/share/rofi/themes/powermenu.rasi
+chmod 777 /usr/share/rofi/themes/powermenu.rasi
+
 cd ~/.config
 wget https://isabellagibson.github.io/arch/config/spt.zip -O spt.zip
 clear
@@ -106,6 +109,7 @@ yes | yay -S github-desktop-bin
 yes | yay -S brave-bin
 yes | yay -S spotifyd
 yes | yay -S spotify-tui
+yes | yay -S zscroll-git
 clear
 
 echo "Enabling system services..."
