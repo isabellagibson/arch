@@ -82,6 +82,7 @@ echo "Installing AUR packages..."
 yes | yay -S gnome-keyring
 yes | yay -S gnu-free-fonts
 yes | yay -S ttf-apple-emoji
+yes | sudo yay -S rust
 
 # Apps
 yes | yay -S spotify
@@ -89,6 +90,8 @@ yes | yay -S visual-studio-code-bin
 yes | yay -S grub-customizer
 yes | yay -S github-desktop-bin
 yes | yay -S brave-bin
+yes | yay -S spotifyd
+yes | yay -S spotify-tui
 clear
 
 echo "Enabling system services..."
