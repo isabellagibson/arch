@@ -85,6 +85,7 @@ cd ~/.config
 wget https://isabellagibson.github.io/arch/config/spt.zip -O spt.zip
 clear
 7z x spt.zip
+sleep 10
 rm spt.zip
 cd
 
