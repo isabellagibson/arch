@@ -14,7 +14,7 @@ clear
 # Install alacritty & other packages
 echo "Installing packages..."
 yes | sudo pacman -S --needed base-devel git
-for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "unzip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "copq" "xdotool"
+for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "unzip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "copq" "xdotool" "rust"
 do
     echo "Installing $package"
     sleep 1
@@ -82,7 +82,7 @@ echo "Installing AUR packages..."
 yes | yay -S gnome-keyring
 yes | yay -S gnu-free-fonts
 yes | yay -S ttf-apple-emoji
-yes | sudo yay -S rust
+clear
 
 # Apps
 yes | yay -S spotify
@@ -96,6 +96,7 @@ clear
 
 echo "Enabling system services..."
 sudo systemctl enable sshd
+sudo systemctl enable spotifyd
 clear
 
 echo "Last step! Changing GRUB theme..."
