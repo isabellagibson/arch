@@ -75,6 +75,18 @@ mkdir ~/.config/alacritty
 wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
+
+cd ~/.config
+wget https://isabellagibson.github.io/arch/config/spt.zip -O spt.zip
+unzip spt.zip
+rm spt.zip
+cd
+
+mkdir ~/.config/spotifyd
+wget https://isabellagibson.github.io/arch/config/spotifyd.conf -O ~/.config/spotifyd/spotifyd.conf
+
+mkdir ~/.config/spotify-tui
+wget https://isabellagibson.github.io/arch/config/spt_client.yml -O ~/.config/spotify-tui/client.yml
 clear
 
 echo "Installing AUR packages..."
