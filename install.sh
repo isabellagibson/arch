@@ -78,6 +78,7 @@ sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
 cd ~/.config
 wget https://isabellagibson.github.io/arch/config/spt.zip -O spt.zip
+clear
 unzip spt.zip
 rm spt.zip
 cd
@@ -123,6 +124,6 @@ clear
 
 # Reboot!
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
-echo "Found display $DISPLAY"
-sleep 5
+echo "Found display $DISPLAY, rebooting in 15 seconds..."
+sleep 15
 sudo reboot now
