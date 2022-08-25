@@ -81,6 +81,11 @@ wget https://isabellagibson.github.io/arch/config/scroll_spotify_status.sh -O ~/
 chmod +x ~/.config/polybar/scripts/get_spotify_status.sh
 chmod +x ~/.config/polybar/scripts/scroll_spotify_status.sh
 
+mkdir -p ~/.local/bin
+sudo wget https://isabellagibson.github.io/arch/config/powermenu -O ~/.local/bin/powermenu
+chmod 777 ~/.local/bin/powermenu
+chmod +x ~/.local/bin/powermenu
+
 wget https://isabellagibson.github.io/arch/config/power.rasi -O /usr/share/rofi/themes/powermenu.rasi
 chmod 777 /usr/share/rofi/themes/powermenu.rasi
 
@@ -129,6 +134,6 @@ clear
 
 # Reboot!
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
-echo "Found display $DISPLAY, rebooting in 15 seconds..."
-sleep 15
+echo "Found display $DISPLAY, rebooting in 5 seconds..."
+sleep 5
 sudo reboot now
