@@ -48,7 +48,7 @@ clear
 # Download/replace config files
 echo "Grabbing config files..."
 
-mkdir ~/.config/polybar/scripts
+mkdir -p ~/.config/polybar/scripts
 wget https://isabellagibson.github.io/arch/config/polybar.ini -O ~/.config/polybar/config.ini
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
