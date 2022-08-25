@@ -48,7 +48,7 @@ clear
 # Download/replace config files
 echo "Grabbing config files..."
 
-mkdir ~/.config/polybar
+mkdir ~/.config/polybar/scripts
 wget https://isabellagibson.github.io/arch/config/polybar.ini -O ~/.config/polybar/config.ini
 wget https://isabellagibson.github.io/arch/config/polybar_launch.sh -O ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
@@ -75,6 +75,11 @@ mkdir ~/.config/alacritty
 wget https://isabellagibson.github.io/arch/config/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 
 sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
+
+wget https://isabellagibson.github.io/arch/config/get_spotify_status.sh -O ~/.config/polybar/scripts/get_spotify_status.sh
+wget https://isabellagibson.github.io/arch/config/scroll_spotify_status.sh -O ~/.config/polybar/scripts/scroll_spotify_status.sh
+chmod +x ~/.config/polybar/scripts/get_spotify_status.sh
+chmod +x ~/.config/polybar/scripts/scroll_spotify_status.sh
 
 cd ~/.config
 wget https://isabellagibson.github.io/arch/config/spt.zip -O spt.zip
