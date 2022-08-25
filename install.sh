@@ -83,11 +83,10 @@ chmod +x ~/.config/polybar/scripts/scroll_spotify_status.sh
 
 mkdir -p ~/.local/bin
 sudo wget https://isabellagibson.github.io/arch/config/powermenu -O ~/.local/bin/powermenu
-chmod 777 ~/.local/bin/powermenu
-chmod +x ~/.local/bin/powermenu
+sudo chmod +x ~/.local/bin/powermenu
 
-wget https://isabellagibson.github.io/arch/config/power.rasi -O /usr/share/rofi/themes/powermenu.rasi
-chmod 777 /usr/share/rofi/themes/powermenu.rasi
+sudo wget https://isabellagibson.github.io/arch/config/power.rasi -O /usr/share/rofi/themes/powermenu.rasi
+sudo chmod 777 /usr/share/rofi/themes/powermenu.rasi
 
 cd ~/.config
 wget https://isabellagibson.github.io/arch/config/spt.zip -O spt.zip
