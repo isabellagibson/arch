@@ -90,6 +90,12 @@ yes | yay -S visual-studio-code-bin
 yes | yay -S grub-customizer
 yes | yay -S github-desktop-bin
 yes | yay -S brave-bin
+yes | yay -S ly
+clear
+
+echo "Enabling system services..."
+sudo systemctl enable ly
+sudo systemctl enable sshd
 clear
 
 echo "Last step! Changing GRUB theme..."
