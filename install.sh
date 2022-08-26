@@ -6,8 +6,8 @@ echo "Root access is needed for this script. Please enter your password below."
 sudo ls
 clear
 echo "Hello! :)"
-echo "Installing everything in 10 seconds, hit CTRL+C to exit..."
-sleep 10
+echo "Installing everything in 3 seconds, hit CTRL+C to exit..."
+sleep 3
 sudo pacman -Syy
 clear
 
@@ -40,7 +40,7 @@ echo "Downloading wallpapers..."
 mkdir -p ~/Pictures
 cd ~/Pictures
 wget https://isabellagibson.github.io/arch/assets/Wallpapers.zip -O Wallpapers.zip
-unzip Wallpapers.zip
+unzip -o Wallpapers.zip
 rm Wallpapers.zip
 cd
 clear
@@ -89,10 +89,10 @@ sudo wget https://isabellagibson.github.io/arch/config/power.rasi -O /usr/share/
 sudo chmod 777 /usr/share/rofi/themes/powermenu.rasi
 
 cd ~/.config
-wget https://isabellagibson.github.io/arch/config/spt.zip -O spt.zip
+wget https://isabellagibson.github.io/arch/config/spt.zip
 clear
-7z x spt.zip
-sleep 10
+7z x -aoa spt.zip
+sleep 1
 rm spt.zip
 cd
 
