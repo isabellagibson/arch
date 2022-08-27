@@ -142,15 +142,14 @@ bindsym $mod+e exec "nemo &"
 bindsym $mod+Shift+e exec "rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C"
 bindsym $mod+m exec "alacritty --class 'Spotify,Spotify' -e spt"
 bindsym $mod+Tab exec "rofi -show window"
+bindsym $mod+Shift+s exec "maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i"
 
 # Workspace application handling
 for_window [class="brave-browser"] move to workspace $ws1
 for_window [class="Spotify"] move to workspace $ws2
 for_window [class="discord"] move to workspace $ws3
 for_window [class="code"] move to workspace $ws4
-# for_window [class="Alacritty"] move to workspace $ws5
 
-exec_always xrandr --output Virtual1 --mode 1920x1080
 exec_always feh --bg-fill --randomize $HOME/Pictures/Wallpapers/
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always picom -f --experimental-backends
@@ -158,7 +157,6 @@ gaps inner 10
 for_window [class=".*"] border pixel 0
 exec_always playerctld daemon &
 exec_always spotifyd &
-# bindsym $mod+l exec "rofi -show power-menu -modi power-menu:.$HOME/.local/bin/rofi-power-menu"
 
 # Media controls
 bindsym XF86AudioPlay exec playerctl play-pause
