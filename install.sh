@@ -14,7 +14,7 @@ clear
 # Install alacritty & other packages
 echo "Installing packages..."
 yes | sudo pacman -S --needed base-devel git
-for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "unzip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "xdotool" "rust" "p7zip"
+for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "unzip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "xdotool" "rust" "p7zip" "networkmanager"
 do
     echo "Installing $package"
     sleep 1
@@ -106,7 +106,6 @@ yes | yay -S ttf-apple-emoji
 clear
 
 # Apps
-yes | yay -S spotify
 yes | yay -S visual-studio-code-bin
 yes | yay -S grub-customizer
 yes | yay -S github-desktop-bin
@@ -119,6 +118,7 @@ clear
 echo "Enabling system services..."
 sudo systemctl enable sshd
 sudo systemctl enable spotifyd
+sudo systemctl enable NetworkManager
 clear
 
 echo "Last step! Changing GRUB theme..."
@@ -133,6 +133,7 @@ clear
 
 # Reboot!
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
-echo "Found display $DISPLAY, rebooting in 5 seconds..."
-sleep 5
+echo "Detected displays:"
+echo $DISPLAY
+sleep 10
 sudo reboot now
