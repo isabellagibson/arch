@@ -122,14 +122,14 @@ sudo systemctl enable NetworkManager
 clear
 
 echo "Last step! Changing GRUB theme..."
-cd
-wget https://isabellagibson.github.io/arch/assets/grub-themes.zip
-unzip grub-themes.zip
-cd grub-themes/
-sudo bash install.sh
-cd
-rm -rf grub-themes.zip grub-themes/
-clear
+# cd
+# wget https://isabellagibson.github.io/arch/assets/grub-themes.zip
+# unzip grub-themes.zip
+# cd grub-themes/
+# sudo bash install.sh
+# cd
+# rm -rf grub-themes.zip grub-themes/
+# clear
 
 # Reboot!
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
