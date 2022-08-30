@@ -98,7 +98,10 @@ sudo wget https://isabellagibson.github.io/arch/local/bin/powermenu -O ~/.local/
 sudo chmod +x ~/.local/bin/powermenu
 sudo wget https://isabellagibson.github.io/arch/config/powermenu.rasi -O /usr/share/rofi/themes/powermenu.rasi
 sudo chmod 777 /usr/share/rofi/themes/powermenu.rasi
+sudo wget https://isabellagibson.github.io/arch/local/bin/changeres -O ~/.local/bin/changeres
+sudo chmod +x ~/.local/bin/changeres
 clear
+
 
 echo "Installing AUR packages..."
 # Dependencies
