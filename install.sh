@@ -1,7 +1,17 @@
 #!/bin/bash
 
 # Clear the terminal and display a welcome message
+
+# Set wallpaper
+echo "Downloading wallpapers..."
+mkdir -p ~/Pictures
+cd ~/Pictures
+wget https://isabellagibson.github.io/arch/assets/Wallpapers.zip -O Wallpapers.zip
+unzip -o Wallpapers.zip
+rm Wallpapers.zip
+cd
 clear
+
 echo "Root access is needed for this script. Please enter your password below."
 sudo ls
 clear
@@ -34,16 +44,6 @@ clear
 echo "Installing fonts..."
 sudo wget https://isabellagibson.github.io/arch/assets/Raleway-SemiBold.ttf -O /usr/share/fonts/RalewaySemiBold.ttf
 sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Regular.ttf -O /usr/share/fonts/RalewayRegular.ttf
-clear
-
-# Set wallpaper
-echo "Downloading wallpapers..."
-mkdir -p ~/Pictures
-cd ~/Pictures
-wget https://isabellagibson.github.io/arch/assets/Wallpapers.zip -O Wallpapers.zip
-unzip -o Wallpapers.zip
-rm Wallpapers.zip
-cd
 clear
 
 # Download/replace config files
@@ -121,7 +121,7 @@ sudo systemctl enable spotifyd
 sudo systemctl enable NetworkManager
 clear
 
-echo "Last step! Changing GRUB theme..."
+# echo "Last step! Changing GRUB theme..."
 # cd
 # wget https://isabellagibson.github.io/arch/assets/grub-themes.zip
 # unzip grub-themes.zip
