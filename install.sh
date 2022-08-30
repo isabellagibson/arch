@@ -1,5 +1,7 @@
 #!/bin/bash
 
+yes | sudo pacman -S p7zip
+clear
 echo "Downloading SPT config..."
 cd ~/.config
 wget https://isabellagibson.github.io/arch/.config/spt.zip
@@ -33,7 +35,7 @@ clear
 # Install alacritty & other packages
 echo "Installing packages..."
 sudo pacman -S --noconfirm base-devel git
-for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "unzip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "xdotool" "rust" "p7zip" "networkmanager"
+for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "unzip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "xdotool" "rust" "networkmanager"
 do
     echo "Installing $package"
     sleep 1
