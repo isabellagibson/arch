@@ -89,7 +89,7 @@ sudo wget https://isabellagibson.github.io/arch/.config/powermenu.rasi -O /usr/s
 sudo chmod 777 /usr/share/rofi/themes/powermenu.rasi
 
 cd ~/.config
-wget https://isabellagibson.github.io/archspt.zip
+wget https://isabellagibson.github.io/arch/.config/spt.zip
 clear
 7z x -aoa spt.zip
 sleep 1
