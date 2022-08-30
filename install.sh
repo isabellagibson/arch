@@ -13,13 +13,13 @@ clear
 
 # Install alacritty & other packages
 echo "Installing packages..."
-yes | sudo pacman -S archlinux-keyring
-yes | sudo pacman -S base-devel git
+sudo pacman -S --noconfirm base-devel git
 for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "unzip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "xdotool" "rust" "p7zip" "networkmanager"
 do
     echo "Installing $package"
     sleep 1
     yes | sudo pacman -S $package
+    clear
 done
 
 # Install yay the AUR helper (needed for some packages)
