@@ -4,7 +4,7 @@ yes | sudo pacman -S p7zip
 clear
 echo "Downloading SPT config..."
 cd ~/.config
-wget https://isabellagibson.github.io/arch/.config/spt.zip
+wget https://isabellagibson.github.io/arch/config/spt.zip
 clear
 7z x -aoa spt.zip
 sleep 1
@@ -61,42 +61,42 @@ clear
 echo "Grabbing config files..."
 
 mkdir -p ~/.config/polybar/scripts
-wget https://isabellagibson.github.io/arch/.config/polybar/config.ini -O ~/.config/polybar/config.ini
-wget https://isabellagibson.github.io/arch/.config/polybar/launch.sh -O ~/.config/polybar/launch.sh
+wget https://isabellagibson.github.io/arch/config/polybar/config.ini -O ~/.config/polybar/config.ini
+wget https://isabellagibson.github.io/arch/config/polybar/launch.sh -O ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
 
 mkdir ~/.config/i3
-wget https://isabellagibson.github.io/arch/.config/i3/config -O ~/.config/i3/config
+wget https://isabellagibson.github.io/arch/config/i3/config -O ~/.config/i3/config
 
 mkdir ~/.config/neofetch
-wget https://isabellagibson.github.io/arch/.config/neofetch/config.conf -O ~/.config/neofetch/config.conf
+wget https://isabellagibson.github.io/arch/config/neofetch/config.conf -O ~/.config/neofetch/config.conf
 
 mkdir ~/.config/rofi
-wget https://isabellagibson.github.io/arch/.config/rofi/config.rasi -O ~/.config/rofi/config.rasi
+wget https://isabellagibson.github.io/arch/config/rofi/config.rasi -O ~/.config/rofi/config.rasi
 
 mkdir ~/.config/picom
-wget https://isabellagibson.github.io/arch/.config/picom/picom.conf -O ~/.config/picom/picom.conf
+wget https://isabellagibson.github.io/arch/config/picom/picom.conf -O ~/.config/picom/picom.conf
 
 mkdir -p ~/.config/Code/User
-wget https://isabellagibson.github.io/arch/.config/Code/User/settings.json -O ~/.config/Code/User/settings.json
+wget https://isabellagibson.github.io/arch/config/Code/User/settings.json -O ~/.config/Code/User/settings.json
 
 mkdir -p ~/.config/dunst
-wget https://isabellagibson.github.io/arch/.config/dunst/dunstrc -O ~/.config/dunst/dunstrc
+wget https://isabellagibson.github.io/arch/config/dunst/dunstrc -O ~/.config/dunst/dunstrc
 
 mkdir ~/.config/alacritty
-wget https://isabellagibson.github.io/arch/.config/alacritty/alacritty.yml -O ~/.config/alacritty/alacritty.yml
+wget https://isabellagibson.github.io/arch/config/alacritty/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 
-sudo wget https://isabellagibson.github.io/arch/.bashrc -O ~/.bashrc
+sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
 
-wget https://isabellagibson.github.io/arch/.config/polybar/scripts/get_spotify_status.sh -O ~/.config/polybar/scripts/get_spotify_status.sh
-wget https://isabellagibson.github.io/arch/.config/polybar/scripts/scroll_spotify_status.sh -O ~/.config/polybar/scripts/scroll_spotify_status.sh
+wget https://isabellagibson.github.io/arch/config/polybar/scripts/get_spotify_status.sh -O ~/.config/polybar/scripts/get_spotify_status.sh
+wget https://isabellagibson.github.io/arch/config/polybar/scripts/scroll_spotify_status.sh -O ~/.config/polybar/scripts/scroll_spotify_status.sh
 chmod +x ~/.config/polybar/scripts/get_spotify_status.sh
 chmod +x ~/.config/polybar/scripts/scroll_spotify_status.sh
 
 mkdir -p ~/.local/bin
-sudo wget https://isabellagibson.github.io/arch/.local/bin/powermenu -O ~/.local/bin/powermenu
+sudo wget https://isabellagibson.github.io/arch/local/bin/powermenu -O ~/.local/bin/powermenu
 sudo chmod +x ~/.local/bin/powermenu
-sudo wget https://isabellagibson.github.io/arch/.config/powermenu.rasi -O /usr/share/rofi/themes/powermenu.rasi
+sudo wget https://isabellagibson.github.io/arch/config/powermenu.rasi -O /usr/share/rofi/themes/powermenu.rasi
 sudo chmod 777 /usr/share/rofi/themes/powermenu.rasi
 clear
 
