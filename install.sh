@@ -1,6 +1,14 @@
 #!/bin/bash
 
-# Clear the terminal and display a welcome message
+echo "Downloading SPT config..."
+cd ~/.config
+wget https://isabellagibson.github.io/arch/.config/spt.zip
+clear
+7z x -aoa spt.zip
+sleep 1
+rm spt.zip
+cd
+clear
 
 # Set wallpaper
 echo "Downloading wallpapers..."
@@ -12,6 +20,7 @@ rm Wallpapers.zip
 cd
 clear
 
+# Clear the terminal and display a welcome message
 echo "Root access is needed for this script. Please enter your password below."
 sudo ls
 clear
@@ -87,15 +96,6 @@ sudo wget https://isabellagibson.github.io/arch/.local/bin/powermenu -O ~/.local
 sudo chmod +x ~/.local/bin/powermenu
 sudo wget https://isabellagibson.github.io/arch/.config/powermenu.rasi -O /usr/share/rofi/themes/powermenu.rasi
 sudo chmod 777 /usr/share/rofi/themes/powermenu.rasi
-
-cd ~/.config
-wget https://isabellagibson.github.io/arch/.config/spt.zip
-clear
-7z x -aoa spt.zip
-sleep 1
-rm spt.zip
-cd
-
 clear
 
 echo "Installing AUR packages..."
