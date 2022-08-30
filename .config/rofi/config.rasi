@@ -1,9 +1,9 @@
 configuration {
-    display-drun: "Apps:";
-    display-window: "Windows:";
-    drun-display-format: "{name}:NAME:";
-    font: "Raleway Regular 10";
-    modi: "window,run,drun";
+  display-drun: "Apps:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "Raleway Regular 10";
+  modi: "window,run,drun";
 }
 
 @theme "/dev/null"
@@ -11,12 +11,9 @@ configuration {
 * {
   bg: #11121D;
   bg-alt: #444b6a;
-
   fg: #FFFFFF;
   fg-alt: #787c99;
-
   background-color: @bg;
-  
   border: 0;
   margin: 0;
   padding: 0;
