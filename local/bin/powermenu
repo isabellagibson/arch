@@ -1,10 +1,11 @@
 #!/bin/bash
 
 chosen=$(printf " Power Off\n Restart\n Lock" | rofi -dmenu -i -theme-str '@import "/usr/share/rofi/themes/powermenu.rasi"')
+chosen_emoji=$(echo "$chosen" | cut -d ' ' -f1)
 
-case "$chosen" in
-    "Power Off") poweroff ;;
-    "Restart") reboot ;;
-    "Lock") slock;;
+case "$chosen_emoji" in
+    "") poweroff ;;
+    "") reboot ;;
+    "") slock;;
     *) exit 1 ;;
 esac
