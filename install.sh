@@ -16,7 +16,7 @@ clear
 echo "Downloading wallpapers..."
 mkdir -p ~/Pictures
 cd ~/Pictures
-wget https://isabellagibson.github.io/arch/assets/Wallpapers.zip -O Wallpapers.zip
+wget https://isabellagibson.github.io/arch/assets/Wallpapers.zip
 unzip -o Wallpapers.zip
 rm Wallpapers.zip
 cd
@@ -111,6 +111,8 @@ yes | yay -S ttf-apple-emoji
 clear
 
 # Apps
+yes | yay -S fm6000
+yes | yay -S bashtop
 yes | yay -S visual-studio-code-bin
 yes | yay -S grub-customizer
 yes | yay -S github-desktop-bin

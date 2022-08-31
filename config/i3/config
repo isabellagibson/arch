@@ -144,6 +144,7 @@ bindsym $mod+m exec "alacritty --class 'Spotify,Spotify' -e spt"
 bindsym $mod+Tab exec "rofi -show window"
 bindsym $mod+Shift+s exec "maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i"
 bindsym $mod+Shift+p exec "~/.local/bin/changeres"
+bindsym $mod+Shift+Tab exec "alacritty -e bashtop"
 
 # Workspace application handling
 for_window [class="brave-browser"] move to workspace $ws1
