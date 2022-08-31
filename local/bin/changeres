@@ -1,9 +1,10 @@
 #!/bin/bash
 
 for display in $(xrandr -q | grep " connected" | cut -d ' ' -f1); do
-    chosen_raw=$(printf "0 Unchanged\n1 1280x720\n2 1920x1080\n3 2560x1440\n4 3840x2160" | rofi -dmenu -p 'Select resolution for $display:')
+    chosen_raw=$(printf "0 Unchanged\n1 1280x720\n2 1920x1080\n3 2560x1440\n4 3840x2160" | rofi -dmenu -p "Select resolution for $display:")
     chosen_int=$(echo "$chosen" | cut -d ') ' -f1)
     new_res=$(echo "$chosen" | cut -d ' ' -f2)
+    echo "Chosen raw: [$chosen_raw], Chosen int: [$chosen_int], New res: [$new_res]"
     case "$chosen_int" in
         "0") break ;;
         *) xrandr --output $display --mode $new_res ;;
