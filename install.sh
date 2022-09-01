@@ -39,7 +39,7 @@ for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "rofi" "feh" "poly
 do
     echo "Installing $package"
     sleep 1
-    yes | sudo pacman -S $package
+    yes | sudo pacman -S --noconfirm $package
     clear
 done
 
