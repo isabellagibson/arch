@@ -104,23 +104,11 @@ clear
 
 
 echo "Installing AUR packages..."
-# Dependencies
-yes | yay -S gnome-keyring
-yes | yay -S gnu-free-fonts
-yes | yay -S ttf-apple-emoji
-clear
-
-# Apps
-yes | yay -S fm6000
-yes | yay -S bashtop
-yes | yay -S visual-studio-code-bin
-yes | yay -S grub-customizer
-yes | yay -S github-desktop-bin
-yes | yay -S brave-bin
-yes | yay -S spotifyd
-yes | yay -S spotify-tui
-yes | yay -S zscroll-git
-clear
+for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studio-code-bin" "grub-customizer" "github-desktop-bin" "brave-bin" "spotifyd" "spotify-tui" "zscroll-git"; do
+    echo "Installing $package via yay"
+    yes | yay -S $package
+    clear
+done
 
 echo "Enabling system services..."
 sudo systemctl enable sshd
