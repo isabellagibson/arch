@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm p7zip unzip
 clear
+sudo pacman -S --noconfirm p7zip unzip
 echo "Downloading SPT config..."
 cd ~/.config
 wget https://isabellagibson.github.io/arch/config/spt.zip
@@ -102,7 +102,6 @@ sudo wget https://isabellagibson.github.io/arch/local/bin/changeres -O ~/.local/
 sudo chmod +x ~/.local/bin/changeres
 clear
 
-
 echo "Installing AUR packages..."
 for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studio-code-bin" "grub-customizer" "github-desktop-bin" "brave-bin" "spotifyd" "spotify-tui" "zscroll-git"; do
     echo "Installing $package via yay"
@@ -111,9 +110,9 @@ for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studi
 done
 
 echo "Enabling system services..."
-sudo systemctl enable sshd
-sudo systemctl enable spotifyd
-sudo systemctl enable NetworkManager
+for service in "sshd" "spotifyd" "NetworkManager"; do
+    sudo systemctl enable $service
+done
 clear
 
 # echo "Last step! Changing GRUB theme..."
