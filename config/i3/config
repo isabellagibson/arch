@@ -154,7 +154,7 @@ for_window [class="code"] move to workspace $ws4
 gaps inner 10
 for_window [class=".*"] border pixel 0
 
-exec --no-startup-id feh --bg-fill --randomize $HOME/Pictures/Wallpapers/arch
+exec_always --no-startup-id feh --bg-fill --randomize $HOME/Pictures/Wallpapers/arch
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id picom -f --experimental-backends
 exec_always --no-startup-id playerctld daemon &
