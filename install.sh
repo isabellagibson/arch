@@ -108,10 +108,17 @@ for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studi
     yes | yay -S $package
     clear
 done
+clear
 
 echo "Enabling system services..."
 for service in "sshd" "spotifyd" "NetworkManager"; do
     sudo systemctl enable $service
+done
+clear
+
+echo "Downloading extensions for VS Code..."
+for ext in "monokai.theme-monokai-pro-vscode" "ms-python.python" "ms-python.vscode-pylance" "ms-toolsai.jupyter" "ms-toolsai.jupyter-keymap" "ms-toolsai.jupyter-renderers" "ms-vscode-remote.remote-ssh" "ms-vscode-remote.remote-ssh-edit" "PKief.material-icon-theme" "ritwickdey.LiveServer"; do
+    code --install-extension $ext
 done
 clear
 
