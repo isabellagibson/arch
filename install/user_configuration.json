@@ -7,20 +7,16 @@
     "bootloader": "grub-install",
     "config_version": "2.5.0",
     "debug": false,
-    "desktop-environment": "i3",
     "hostname": "arch",
     "kernels": [
         "linux"
     ],
     "keyboard-layout": "us",
-    "mirror-region": {},
     "mount_point": null,
     "ntp": true,
     "packages": [],
     "plugin": null,
-    "profile": {
-        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/desktop.py"
-    },
+    "profile": null,
     "script": "guided",
     "silent": false,
     "swap": true,
