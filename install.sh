@@ -103,7 +103,7 @@ sudo chmod +x ~/.local/bin/changeres
 clear
 
 echo "Installing AUR packages..."
-for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studio-code-bin" "grub-customizer" "github-desktop-bin" "brave-bin" "spotifyd" "spotify-tui" "zscroll-git"; do
+for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studio-code-bin" "grub-customizer" "github-desktop-bin" "brave-bin" "spotifyd" "spotify-tui" "zscroll-git" "ttf-apple-emoji"; do
     echo "Installing $package via yay"
     yes | yay -S $package
     clear
