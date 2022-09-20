@@ -117,7 +117,7 @@ done
 clear
 
 echo "Downloading extensions for VS Code..."
-for ext in "monokai.theme-monokai-pro-vscode" "ms-python.python" "ms-python.vscode-pylance" "ms-toolsai.jupyter" "ms-toolsai.jupyter-keymap" "ms-toolsai.jupyter-renderers" "ms-vscode-remote.remote-ssh" "ms-vscode-remote.remote-ssh-edit" "PKief.material-icon-theme" "ritwickdey.LiveServer" "flesler.url-encode"; do
+for ext in "monokai.theme-monokai-pro-vscode" "ms-python.python" "ms-python.vscode-pylance" "ms-toolsai.jupyter" "ms-toolsai.jupyter-keymap" "ms-toolsai.jupyter-renderers" "ms-vscode-remote.remote-ssh" "ms-vscode-remote.remote-ssh-edit" "PKief.material-icon-theme" "ritwickdey.LiveServer" "flesler.url-encode" "luisfontes19.vscode-swissknife"; do
     code --install-extension $ext
 done
 clear
