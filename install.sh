@@ -1,10 +1,12 @@
 #!/bin/bash
 
+BASE_URL="https://isabellagibson.github.io/arch"
+
 clear
 sudo pacman -S --noconfirm p7zip unzip
 echo "Downloading SPT config..."
 cd ~/.config
-wget https://isabellagibson.github.io/arch/config/spt.zip
+wget $BASE_URL/config/spt.zip
 clear
 7z x -aoa spt.zip
 sleep 1
@@ -16,7 +18,7 @@ clear
 echo "Downloading wallpapers..."
 mkdir -p ~/Pictures
 cd ~/Pictures
-wget https://isabellagibson.github.io/arch/assets/Wallpapers.zip
+wget $BASE_URL/assets/Wallpapers.zip
 unzip -o Wallpapers.zip
 rm Wallpapers.zip
 cd
@@ -53,52 +55,52 @@ clear
 
 # Install fonts
 echo "Installing fonts..."
-sudo wget https://isabellagibson.github.io/arch/assets/Raleway-SemiBold.ttf -O /usr/share/fonts/RalewaySemiBold.ttf
-sudo wget https://isabellagibson.github.io/arch/assets/Raleway-Regular.ttf -O /usr/share/fonts/RalewayRegular.ttf
+sudo wget $BASE_URL/assets/Raleway-SemiBold.ttf -O /usr/share/fonts/RalewaySemiBold.ttf
+sudo wget $BASE_URL/assets/Raleway-Regular.ttf -O /usr/share/fonts/RalewayRegular.ttf
 clear
 
 # Download/replace config files
 echo "Grabbing config files..."
 
 mkdir -p ~/.config/polybar/scripts
-wget https://isabellagibson.github.io/arch/config/polybar/config.ini -O ~/.config/polybar/config.ini
-wget https://isabellagibson.github.io/arch/config/polybar/launch.sh -O ~/.config/polybar/launch.sh
+wget $BASE_URL/config/polybar/config.ini -O ~/.config/polybar/config.ini
+wget $BASE_URL/config/polybar/launch.sh -O ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
 
 mkdir ~/.config/i3
-wget https://isabellagibson.github.io/arch/config/i3/config -O ~/.config/i3/config
+wget $BASE_URL/config/i3/config -O ~/.config/i3/config
 
 mkdir ~/.config/neofetch
-wget https://isabellagibson.github.io/arch/config/neofetch/config.conf -O ~/.config/neofetch/config.conf
+wget $BASE_URL/config/neofetch/config.conf -O ~/.config/neofetch/config.conf
 
 mkdir ~/.config/rofi
-wget https://isabellagibson.github.io/arch/config/rofi/config.rasi -O ~/.config/rofi/config.rasi
+wget $BASE_URL/config/rofi/config.rasi -O ~/.config/rofi/config.rasi
 
 mkdir ~/.config/picom
-wget https://isabellagibson.github.io/arch/config/picom/picom.conf -O ~/.config/picom/picom.conf
+wget $BASE_URL/config/picom/picom.conf -O ~/.config/picom/picom.conf
 
 mkdir -p ~/.config/Code/User
-wget https://isabellagibson.github.io/arch/config/Code/User/settings.json -O ~/.config/Code/User/settings.json
+wget $BASE_URL/config/Code/User/settings.json -O ~/.config/Code/User/settings.json
 
 mkdir -p ~/.config/dunst
-wget https://isabellagibson.github.io/arch/config/dunst/dunstrc -O ~/.config/dunst/dunstrc
+wget $BASE_URL/config/dunst/dunstrc -O ~/.config/dunst/dunstrc
 
 mkdir ~/.config/alacritty
-wget https://isabellagibson.github.io/arch/config/alacritty/alacritty.yml -O ~/.config/alacritty/alacritty.yml
+wget $BASE_URL/config/alacritty/alacritty.yml -O ~/.config/alacritty/alacritty.yml
 
-sudo wget https://isabellagibson.github.io/arch/bashrc -O ~/.bashrc
+sudo wget $BASE_URL/bashrc -O ~/.bashrc
 
-wget https://isabellagibson.github.io/arch/config/polybar/scripts/get_spotify_status.sh -O ~/.config/polybar/scripts/get_spotify_status.sh
-wget https://isabellagibson.github.io/arch/config/polybar/scripts/scroll_spotify_status.sh -O ~/.config/polybar/scripts/scroll_spotify_status.sh
+wget $BASE_URL/config/polybar/scripts/get_spotify_status.sh -O ~/.config/polybar/scripts/get_spotify_status.sh
+wget $BASE_URL/config/polybar/scripts/scroll_spotify_status.sh -O ~/.config/polybar/scripts/scroll_spotify_status.sh
 chmod +x ~/.config/polybar/scripts/get_spotify_status.sh
 chmod +x ~/.config/polybar/scripts/scroll_spotify_status.sh
 
 mkdir -p ~/.local/bin
-sudo wget https://isabellagibson.github.io/arch/local/bin/powermenu -O ~/.local/bin/powermenu
+sudo wget $BASE_URL/local/bin/powermenu -O ~/.local/bin/powermenu
 sudo chmod +x ~/.local/bin/powermenu
-sudo wget https://isabellagibson.github.io/arch/config/powermenu.rasi -O /usr/share/rofi/themes/powermenu.rasi
+sudo wget $BASE_URL/config/powermenu.rasi -O /usr/share/rofi/themes/powermenu.rasi
 sudo chmod 777 /usr/share/rofi/themes/powermenu.rasi
-sudo wget https://isabellagibson.github.io/arch/local/bin/changeres -O ~/.local/bin/changeres
+sudo wget $BASE_URL/local/bin/changeres -O ~/.local/bin/changeres
 sudo chmod +x ~/.local/bin/changeres
 clear
 
@@ -124,7 +126,7 @@ clear
 
 # echo "Last step! Changing GRUB theme..."
 # cd
-# wget https://isabellagibson.github.io/arch/assets/grub-themes.zip
+# wget $BASE_URL/assets/grub-themes.zip
 # unzip grub-themes.zip
 # cd grub-themes/
 # sudo bash install.sh
