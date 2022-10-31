@@ -37,7 +37,7 @@ clear
 # Install alacritty & other packages
 echo "Installing packages..."
 sudo pacman -S --noconfirm base-devel git
-for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "xdotool" "rust" "networkmanager" "virtualbox"
+for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "xdotool" "rust" "networkmanager" "virtualbox" "sddm" "mpv" "maim"
 do
     echo "Installing $package"
     sleep 1
@@ -105,7 +105,7 @@ sudo chmod +x ~/.local/bin/changeres
 clear
 
 echo "Installing AUR packages..."
-for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studio-code-bin" "grub-customizer" "github-desktop-bin" "brave-bin" "spotifyd" "spotify-tui" "zscroll-git" "ttf-apple-emoji"; do
+for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studio-code-bin" "github-desktop-bin" "brave-bin" "spotifyd" "spotify-tui" "zscroll-git" "ttf-apple-emoji"; do
     echo "Installing $package via yay"
     yes | yay -S $package
     clear

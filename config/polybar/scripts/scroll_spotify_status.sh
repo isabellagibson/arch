@@ -1,8 +1,8 @@
 #!/bin/bash
 
-zscroll -l 40 \
+zscroll -l 30 \
         --delay 0.05 \
-        --scroll-padding "  " \
+        --scroll-padding " | " \
         --match-command "`dirname $0`/get_spotify_status.sh --status" \
         --match-text "Playing" "--scroll 1" \
         --match-text "Paused" "--scroll 0" \
