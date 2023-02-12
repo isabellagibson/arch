@@ -124,15 +124,15 @@ for ext in "monokai.theme-monokai-pro-vscode" "ms-python.python" "ms-python.vsco
 done
 clear
 
-# echo "Last step! Changing GRUB theme..."
-# cd
-# wget $BASE_URL/assets/grub-themes.zip
-# unzip grub-themes.zip
-# cd grub-themes/
-# sudo bash install.sh
-# cd
-# rm -rf grub-themes.zip grub-themes/
-# clear
+echo "Last step! Changing GRUB theme..."
+cd
+wget $BASE_URL/assets/grub-themes.zip
+unzip grub-themes.zip
+cd grub-themes/
+sudo bash install.sh
+cd
+rm -rf grub-themes.zip grub-themes/
+clear
 
 # Reboot!
 DISPLAY=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
