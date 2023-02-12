@@ -37,7 +37,7 @@ clear
 # Install alacritty & other packages
 echo "Installing packages..."
 sudo pacman -S --noconfirm base-devel git
-for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ttf-font-awesome" "ttf-fira-code" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "xdotool" "rust" "networkmanager" "virtualbox" "sddm" "mpv" "maim"
+for package in "neofetch" "alacritty" "net-tools" "ufw" "zip" "rofi" "feh" "polybar" "nemo" "coreutils" "inetutils" "discord" "nmap" "ffmpeg" "playerctl" "rofi-emoji" "picom" "dunst" "libnotify" "yt-dlp" "python-pip" "man-db" "xsel" "xclip" "xdotool" "rust" "networkmanager" "virtualbox" "mpv" "maim"
 do
     echo "Installing $package"
     sleep 1
@@ -57,10 +57,13 @@ clear
 echo "Installing fonts..."
 sudo wget $BASE_URL/assets/Raleway-SemiBold.ttf -O /usr/share/fonts/RalewaySemiBold.ttf
 sudo wget $BASE_URL/assets/Raleway-Regular.ttf -O /usr/share/fonts/RalewayRegular.ttf
+for package in "ttf-font-awesome" "ttf-fira-code" "ttf-apple-emoji"; do
+    yes | sudo pacman -S --noconfirm $package
+done
 clear
 
 # Download/replace config files
-echo "Grabbing config files..."
+echo "Downloading config files..."
 
 mkdir -p ~/.config/polybar/scripts
 wget $BASE_URL/config/polybar/config.ini -O ~/.config/polybar/config.ini
@@ -105,7 +108,7 @@ sudo chmod +x ~/.local/bin/changeres
 clear
 
 echo "Installing AUR packages..."
-for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studio-code-bin" "github-desktop-bin" "brave-bin" "spotifyd" "spotify-tui" "zscroll-git" "ttf-apple-emoji"; do
+for package in "gnome-keyring" "gnu-free-fonts" "fm6000" "bashtop" "visual-studio-code-bin" "github-desktop-bin" "brave-bin" "spotifyd" "spotify-tui" "zscroll-git"; do
     echo "Installing $package via yay"
     yes | yay -S $package
     clear
